@@ -6,7 +6,7 @@
 set $mod                             Mod4
 set $smod                            Shift
 set $wm_setting_font                 InconsolataGo Nerd Font Mono 12
-set $wm_setting_gap_top              0
+set $wm_setting_gap_top              10
 set $wm_setting_gap_left             12
 set $wm_setting_gap_bottom           0
 set $wm_setting_gap_right            25
@@ -21,7 +21,7 @@ set $wm_setting_key_right            l
 set $wm_setting_app_terminal         kitty
 set $wm_setting_app_browser          firefox
 set $wm_setting_app_launcher         dmenu_run
-set $wm_setting_app_compositor       picom -f
+set $wm_setting_app_compositor       picom
 
 set $wm_color_border_active_bg       #81A1C1
 set $wm_color_border_active_fg       #3B4252
@@ -60,16 +60,17 @@ bindsym $mod+F2 exec $wm_setting_app_browser
 
 # Start a program launcher
 bindsym $mod+d exec $wm_setting_app_launcher
+# bindsym $mod+d exec --no-startup-id $HOME/.config/polybar/mytheme/scripts/launcher.sh
 
 # Run a window compositor (for effects like transparency or full VSync)
-exec_always --no-startup-id $wm_setting_app_compositor
+exec_always --no-startup-id $wm_setting_app_compositor -b --experimental-backends
 exec_always --no-startup-id /usr/libexec/gsd-xsettings 
 
 # Backgrounds
 exec_always --no-startup-id feh --bg-fill ~/.dotfiles/backgrounds/Debian11_wallpaper.png
 
 # Polybar
-exec_always --no-startup-id ~/.config/polybar/launch.sh
+exec_always --no-startup-id ~/.config/polybar/mytheme/launch.sh
 
 ### Workspaces ###
 # Define names for default workspaces for which we configure key bindings later on.
@@ -172,7 +173,7 @@ gaps left   $wm_setting_gap_left
 gaps bottom $wm_setting_gap_bottom
 gaps right   $wm_setting_gap_right
 gaps inner      $wm_setting_gap_inner
-smart_gaps on
+# smart_gaps on
 
 ### Borders ###
 default_border pixel $wm_setting_border_size
