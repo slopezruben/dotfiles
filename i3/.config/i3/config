@@ -6,7 +6,7 @@
 set $mod                             Mod4
 set $smod                            Shift
 set $wm_setting_font                 InconsolataGo Nerd Font Mono 12
-set $wm_setting_gap_top              10
+set $wm_setting_gap_top              40
 set $wm_setting_gap_left             12
 set $wm_setting_gap_bottom           0
 set $wm_setting_gap_right            25
@@ -59,8 +59,8 @@ bindsym $mod+Return exec $wm_setting_app_terminal
 bindsym $mod+F2 exec $wm_setting_app_browser
 
 # Start a program launcher
-bindsym $mod+d exec $wm_setting_app_launcher
-# bindsym $mod+d exec --no-startup-id $HOME/.config/polybar/mytheme/scripts/launcher.sh
+# bindsym $mod+d exec $wm_setting_app_launcher
+bindsym $mod+d exec --no-startup-id $HOME/.config/polybar/mytheme/scripts/launcher.sh
 
 # Run a window compositor (for effects like transparency or full VSync)
 exec_always --no-startup-id $wm_setting_app_compositor -b --experimental-backends
