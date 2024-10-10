@@ -20,10 +20,10 @@
     
 ## tmux
 # TODOs
-- [ ] do: https://learn.typecraft.dev/tutorial/never-lose-your-configs-again/ GNU stow integration
+- [x] do: https://learn.typecraft.dev/tutorial/never-lose-your-configs-again/ GNU stow integration
 - [ ] do: install all required software script (bob -> nvim, tmux, zsh, etc).
 - [x] nvim: Moving all keymaps to a separate script (ruben/remap.lua).
 - [x] nvim: redo after/plugin/trouble.lua
-- [ ] tmux: get some rrrice going
-- [ ] add: .zshrc
-- [ ] add: i3
+- [x] tmux: get some rrrice going
+- [x] add: .zshrc
+- [x] add: i3
