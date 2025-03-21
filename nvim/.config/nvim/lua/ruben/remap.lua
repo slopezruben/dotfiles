@@ -17,7 +17,7 @@ keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left
 keymap.set("n", "<C-a>", "gg<S-v>G")
 
 --- Tab Control
-keymap.set("n", "te", ":tabedit", opts)
+keymap.set("n", "te", ":tabedit<Return>", opts)
 keymap.set("n", "<tab>", ":tabnext<Return>", opts)
 keymap.set("n", "<S-tab>", ":tabprev<Return>", opts)
 
@@ -28,3 +28,5 @@ keymap.set("n", "tc", ":TroubleClose<Return>");
 --- Open nav
 keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
+--- Get Split Buffer
+keymap.set("n", "<leader>vt1", ":vert sb1<Return>")
